@@ -11,11 +11,18 @@ def server(params, opt, world):
     ##here, you should generate one big 1-D tensor containing all parameters to make the transfer process easy
     agg = flat_grad.clone() #agg as a aggregated counter to record sum gradients
 
-    #                                                                   #
-    #                                                                   #
-    # your code here: receive gradients form worker, and add them to agg#
-    #                                                                   #
-    #                                                                   #
+    # --- your code here: receive gradients form worker, and add them to agg ---
+    recv_bufs = [torch.empty_like(flat_grad) for _ in range(1, world)]
+    recv_reqs = [dist.irecv(buf, src=src) for src, buf in enumerate(recv_bufs, 1)]
+
+    for req in recv_reqs:
+        req.wait()
+
+    for buf in recv_bufs:
+        agg.add_(buf)
+
+    agg.div_(world) # average gradients
+    # --- end of code ---
 
     synced_grads = _unflatten_dense_tensors(agg, [p.grad for p in params])
     # ---- set averaged grads locally & step ----
@@ -25,31 +32,29 @@ def server(params, opt, world):
 
     # ---- broadcast updated params for this subset ----
     flat_param = _flatten_dense_tensors([p.data for p in params]).contiguous()
-    #                                                                   #
-    #                                                                   #
-    # your code here: send packed 1-D parameter tensor to all workers   #
-    #                                                                   #
-    #                                                                   #
+
+    # --- your code here: send packed 1-D parameter tensor to all workers ---
+    send_reqs = [dist.isend(flat_param, dst=dst) for dst in range(1, world)]
+    for req in send_reqs:
+        req.wait()
+    # --- end of code ---
 
 def worker(params):
     flat_grad = _flatten_dense_tensors([p.grad for p in params]).contiguous()
     # ---- push grads to server ----
 
-    #                                                                   #
-    #                                                                   #
-    # your code here: send packed 1-D gradient to server
-    #                                                                   #
-    #                                                                   #
+    # --- your code here: send packed 1-D gradient to server ---
+    send_req = dist.isend(flat_grad, dst=0)
+    send_req.wait()
+    # --- end of code ---
 
     # ---- receive updated params, write into local model ----
-    
-    #                                                                   #
-    #                                                                   #
-    # your code here: please get correct 1-D packed parameter from server
-    #           And then unpacked it and store in synced_params
-    #                                                                   #
-    synced_params = None #you should  assign correct value for synced_params#
-
+    # --- your code here: please get correct 1-D packed parameter from server ---
+    flat_param = torch.empty_like(flat_grad)
+    recv_req = dist.irecv(flat_param, src=0)
+    recv_req.wait()
+    synced_params = _unflatten_dense_tensors(flat_param, params) #you should  assign correct value for synced_params#
+    # --- end of  code ---
 
     # ---- syncronize the parameters ----
     for p, s in zip(params, synced_params):
