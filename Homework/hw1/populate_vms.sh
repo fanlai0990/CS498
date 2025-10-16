@@ -4,13 +4,15 @@
 set -e
 
 USER="alanluo3"
-SSH_KEY="~/.ssh/id_ed25519"
+SSH_KEY="~/.ssh/id_rsa"
 PROJECT_DIR="$HOME/CS498/Homework/hw1"
 DEST_PATH="~"
 
+SSH_OPTS="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+
 HOSTS=(
-    "c220g5-111203.wisc.cloudlab.us" # Node 1
-    "c220g5-111215.wisc.cloudlab.us" # Node 2
+    "c220g5-120103.wisc.cloudlab.us" # Node 1
+    "c220g5-110905.wisc.cloudlab.us" # Node 2
 )
 
 echo "Copying from $PROJECT_DIR to ${#HOSTS[@]} nodes..."
@@ -23,7 +25,7 @@ for i in "${!HOSTS[@]}"; do
         
         # copy PROJECT_DIR from local machine to the remote node.
         echo "- Copying local '$PROJECT_DIR' directory to $HOST:$DEST_PATH..."
-        scp -q -r -i "$SSH_KEY" "$PROJECT_DIR" "$USER@$HOST:$DEST_PATH"
+        scp -q -r -i "$SSH_KEY" $SSH_OPTS "$PROJECT_DIR" "$USER@$HOST:$DEST_PATH"
         
         echo "Finished VM $(($i + 1)): $HOST"
         echo "=================================================="

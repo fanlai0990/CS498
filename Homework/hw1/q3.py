@@ -7,36 +7,36 @@ import torch.distributed as dist
 
 def reduce_scatter(chunks, tmp, world, rank, left, right):
     # your code here: follow slides instruction: do counter-clockwise iteration
-    current = rank
+    buf = torch.zeros_like(chunks[0])
 
-    for _ in range(world - 1):
-        next_idx = (current - 1) % world
+    for i in range(world - 1):
+        send_idx = (rank - i + world) % world
+        recv_idx = (rank - i - 1 + world) % world
 
-        send_req = dist.isend(chunks[current], dst=left)
-        recv_req = dist.irecv(tmp, src=right)
-
-        send_req.wait()
+        send_req = dist.isend(tensor=chunks[send_idx], dst=right)
+        recv_req = dist.irecv(tensor=buf, src=left)
         recv_req.wait()
 
-        chunks[next_idx].add_(tmp)
-
-        current = next_idx
+        chunks[recv_idx] += buf
+        send_req.wait()
     # --- end of code
 
     return
         
 def all_gather(chunks, tmp, current, world, rank, left, right):
     # --- your code here: follow slides instruction: do counter-clockwise iteration ---
-    for _ in range(world - 1):
-        next_idx = (current - 1) % world
+    buf = torch.zeros_like(chunks[0])
 
-        send_req = dist.isend(chunks[current], dst=left)
-        recv_req = dist.irecv(chunks[next_idx], src=right)
+    for i in range(world - 1):
+        send_idx = (rank - i - 1 + world) % world
+        recv_idx = (rank - i - 2 + world) % world
 
-        send_req.wait()
+        send_req = dist.isend(tensor=chunks[send_idx], dst=right)
+        recv_req = dist.irecv(tensor=buf, src=left)
         recv_req.wait()
 
-        current = next_idx
+        chunks[recv_idx].copy_(buf)
+        send_req.wait()
     # --- end of code ---
     return
 
@@ -66,6 +66,6 @@ def ring_allreduce_(tensor: torch.Tensor, world_size = None, rankid = None):
     # --- end of code ---
     
     # stitch & unpad  
-    flat /= world
-    tensor.view(-1).copy_(flat[:n])
+    padded_flat /= world
+    tensor.view(-1).copy_(padded_flat[:n])
     return
