@@ -4,7 +4,7 @@
 **Lectures**: 1310 Digital Computer Laboratory, MW: 9:30 AM – 10:45 AM
 | Member (NetID) | Role | Office Hours |
 | :---------------- | :--- | :----------- |
-| [Fan Lai](https://fanlai.me/) (fanlai) | Instructor | 3128 Siebel Center. W 3:00 PM – 4:00 PM
+| [Fan Lai](https://fanlai.me/) (fanlai) | Instructor | 3128 Siebel Center. M 2:00 PM – 3:00 PM
 | TBD | TAs |  [Zoom](). F 2:00 PM - 3:00 PM
 
 **Canvas**:  *ALL* communication regarding this course must be via [Canvas](https://canvas.illinois.edu/courses/73559). This includes questions, discussions, announcements, assignments, as well as private messages.
@@ -28,7 +28,7 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 *This is an evolving list and subject to changes due to the breakneck pace of AI*
 | Date       | Topic                                                  | Lecturer       | Slides | Assignment/Summary |
 |------------|:------------------------------------------------------:|:--------------:|--------|--------------------|
-| Aug 24     | Course Introduction and Logistics                      | Fan Lai        |        |                    |
+| Aug 24     | Course Introduction and Logistics                      | Fan Lai        |   [Slides](./Slides/L1_overview.pdf)     |                    |
 | Aug 26     | **No Class** (Project Kickoff & Team Formation)                         | Fan Lai        |        |                    |
 | Aug 31     | Transformers                                           | Fan Lai        |        |                    |
 | Sept 2     | Transformers Deep Dive                                 | Fan Lai        |        |  |
@@ -40,10 +40,10 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 | Sept 23    | **No Class** (Meet to refine project ideas)       | Fan Lai        |        |       
 | Sept 28    | Multi-Dimensional Parallelism                          | Fan Lai        |        | [Alpa](https://www.usenix.org/system/files/osdi22-zheng-lianmin.pdf) |
 | Sept 30    | Mixed Precision Training                               | Fan Lai        |        |    Project Proposal Due               |
-| Oct 5      | Memory Optimization                                    | Fan Lai        |        | [ZeRO-style Data Parallelism](https://arxiv.org/abs/1910.02054) |
-| Oct 7      | Finetuning Techniques                                  | Fan Lai        |        | Assignment 1 Due   |
-| Oct 12     | Project Proposal Feedback   I                    | Fan Lai        |        |                    |
-| Oct 14     | Project Proposal Feedback   II                    | Fan Lai        |        |                    |
+| Oct 5     | Project Proposal Feedback   I                    | Fan Lai        |        |                    |
+| Oct 7     | Project Proposal Feedback   II                    | Fan Lai        |        |                    |
+| Oct 12      | Memory Optimization                                    | Fan Lai        |        | [ZeRO-style Data Parallelism](https://arxiv.org/abs/1910.02054) |
+| Oct 14      | Finetuning Techniques                                  | Fan Lai        |        | Assignment 1 Due   |
 | Oct 19     | Guest Lecture                                          |                |        | Assignment 2 Released |
 | Oct 21     | Inference Overview                                     | Fan Lai        |        | [Speculative Decoding](https://arxiv.org/abs/2211.17192) |
 | Oct 26     | Batch Serving Techniques                               | Fan Lai        |        | [DistServe](https://arxiv.org/abs/2401.09670) |
@@ -61,7 +61,7 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 | Dec 9      | Final Presentations                                    |                |        |                    |
 | Dec 18     |                                                |                |        | Final Report Due   |
  ## Tentative Grading
-**Groups**:  Panel discussion and research project will be performed in groups of 4-5 students. Form a group and [declare your group's membership and paper preferences](https://forms.gle/A9mrg64SJXVA2FeP9) by **Sept 5**. After this date, we will form groups from the remaining students.
+**Groups**:  Panel discussion and research project will be performed in groups of 4-5 students. Form a group and [declare your group's membership and paper preferences](https://forms.gle/dQCcc3zYL2fckGwUA) by **Sept 5**. After this date, we will form groups from the remaining students.
 
 |                         | Weight | 
 | ------------------------| :------| 
@@ -127,7 +127,7 @@ You will have to complete substantive work an instructor-approved problem and ha
 You must meet the following milestones (unless otherwise specified in future announcements) to ensure a high-quality project at the end of the semester:
 
 * Turn in a 2-page draft proposal ([template](https://www.overleaf.com/read/bsrcbphcvyzc#d075e8)), plus as many pages as needed for references, by **Sept 30**. Remember to include the names and UIUC email addresses of the group members. 
-* Each group must schedule project discussion with the instructor during class hours or office hours in the week of **Oct 12** and **Oct 14**.
+* Each group must schedule project discussion with the instructor during class hours or office hours in the week of **Oct 5** and **Oct 7**.
 * Each group must turn in a 4-page mid-semester report via email **on or before 6:00PM CST on Nov 4.** 
 * Each group must turn in an 8-page final report and your code in Canvas **on or before 6:00PM CST on Dec 18.** The report must be submitted as a PDF file, with formatting similar to that of the papers you've read in the class. The self-contained (i.e., include ALL dependencies) code must be submitted as a zip file. Each zip file containing the code must include a README file with a step-by-step guide on how to compile and run the provided code.
 * You can find how to access GPU resources [here](./Resources/cloudlab.md).
