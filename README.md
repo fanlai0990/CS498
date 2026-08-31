@@ -30,7 +30,7 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 |------------|:------------------------------------------------------:|:--------------:|--------|--------------------|
 | Aug 24     | Course Introduction and Logistics                      | Fan Lai        |   [Slides](./Slides/L1_overview.pdf)     |                    |
 | Aug 26     | **No Class** (Project Kickoff & Team Formation)                         | Fan Lai        |        |                    |
-| Aug 31     | Transformers                                           | Fan Lai        |        |                    |
+| Aug 31     | Transformers                                           | Fan Lai        |      [Slides](./Slides/L2_Transformers.pdf)  |                    |
 | Sept 2     | Transformers Deep Dive                                 | Fan Lai        |        |  |
 | Sept 7     | **No Class** (Labor Day)                               |                |        |                    |
 | Sept 9     | Distributed Training Overview                          | Fan Lai        |        |        [BLASST](https://arxiv.org/abs/2512.12087)            |
