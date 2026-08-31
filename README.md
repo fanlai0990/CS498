@@ -5,7 +5,7 @@
 | Member (NetID) | Role | Office Hours |
 | :---------------- | :--- | :----------- |
 | [Fan Lai](https://fanlai.me/) (fanlai) | Instructor | 3128 Siebel Center. M 2:00 PM – 3:00 PM
-| TBD | TAs |  [Zoom](). F 2:00 PM - 3:00 PM
+| banruol2 and tonyhong | TAs | [Zoom](https://illinois.zoom.us/j/85069123753?pwd=cXOpecb0JgGSm13kuKbDgT8OiCYrVz.1). F 2:00 PM - 3:00 PM
 
 **Canvas**:  *ALL* communication regarding this course must be via [Canvas](https://canvas.illinois.edu/courses/73559). This includes questions, discussions, announcements, assignments, as well as private messages.
 
