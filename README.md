@@ -33,7 +33,7 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 | Aug 31     | Transformers                                           | Fan Lai        |      [Slides](./Slides/L2_Transformers.pdf)  |                    |
 | Sept 2     | Transformers Deep Dive                                 | Fan Lai        |   [Slides](./Slides/L3_Transformers_Deep.pdf)     |  |
 | Sept 7     | **No Class** (Labor Day)                               |                |        |                    |
-| Sept 9     | Distributed Training Overview                          | Fan Lai        |        |        [BLASST](https://arxiv.org/abs/2512.12087)            |
+| Sept 9     | Distributed Training Overview                          | Fan Lai        |  [Slides](./Slides/L4_distributed_training_overview.pdf)      |        [BLASST](https://arxiv.org/abs/2512.12087)            |
 | Sept 14    | Data Parallelism                                       | Fan Lai        |        | [DeepSeek-V3 Report (Sec 1-3)](https://arxiv.org/abs/2412.19437), Assignment 1 Released |
 | Sept 16    | Tensor Parallelism                                     | Fan Lai        |        |                    |             |
 | Sept 21    | Pipeline Parallelism                                   | Fan Lai        |        | [LlamaRL](https://arxiv.org/abs/2505.24034) |
