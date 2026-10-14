@@ -43,7 +43,7 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 | Oct 5     | Project Proposal Feedback   I                    | Fan Lai        |        |                    |
 | Oct 7     | Project Proposal Feedback   II                    | Fan Lai        |        |                    |
 | Oct 12      | Memory Optimization                                    | Fan Lai        | [Slides](./Slides/L10_training_memory_opt.pdf)       | [ZeRO-style Data Parallelism](https://arxiv.org/abs/1910.02054) |
-| Oct 14      | Finetuning Techniques                                  | Fan Lai        |        | Assignment 1 Due   |
+| Oct 14      | Finetuning Techniques                                  | Fan Lai        | [Slides](./Slides/L11_fine_tuning_techniques.pdf)       | Assignment 1 Due   |
 | Oct 19 | Inference Overview       | Fan Lai | | [Speculative Decoding](https://arxiv.org/abs/2211.17192), Assignment 2 Release |
 | Oct 21 | Batch Serving Techniques | Fan Lai | | [DistServe](https://arxiv.org/abs/2401.09670) |
 | Oct 26 | Paged Attention          | Fan Lai | | [SGLang](https://arxiv.org/abs/2312.07104) |
