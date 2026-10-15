@@ -44,10 +44,10 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 | Oct 7     | Project Proposal Feedback   II                    | Fan Lai        |        |                    |
 | Oct 12      | Memory Optimization                                    | Fan Lai        | [Slides](./Slides/L10_training_memory_opt.pdf)       | [ZeRO-style Data Parallelism](https://arxiv.org/abs/1910.02054) |
 | Oct 14      | Finetuning Techniques                                  | Fan Lai        | [Slides](./Slides/L11_fine_tuning_techniques.pdf)       | Assignment 1 Due   |
-| Oct 19 | Inference Overview       | Fan Lai | | [Speculative Decoding](https://arxiv.org/abs/2211.17192), Assignment 2 Release |
-| Oct 21 | Batch Serving Techniques | Fan Lai | | [DistServe](https://arxiv.org/abs/2401.09670) |
-| Oct 26 | Paged Attention          | Fan Lai | | [SGLang](https://arxiv.org/abs/2312.07104) |
-| Oct 28 | Adaptive KV              | Fan Lai | | |
+| Oct 19 | Inference Overview       | Fan Lai | |   |
+| Oct 21 | Batch Serving Techniques | Fan Lai | | [Speculative Decoding](https://arxiv.org/abs/2211.17192), Assignment 2 Release |
+| Oct 26 | Paged Attention          | Fan Lai | | [DistServe](https://arxiv.org/abs/2401.09670) |
+| Oct 28 | Adaptive KV              | Fan Lai | | [SGLang](https://arxiv.org/abs/2312.07104) |
 | Nov 2  | Quantization             | Fan Lai | | |
 | Nov 4  | MoE Efficiency           | Fan Lai | | Mid-semester Report Due |
 | Nov 9  | Project Check-in & Feedback  |  Fan Lai       | | Assignment 2 Due, Assignment 3 Released (for 4-credit students) |
