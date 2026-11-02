@@ -48,7 +48,7 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 | Oct 21 | Batch Serving Techniques | Fan Lai | [Slides](./Slides/L13_inference_scheduling.pdf) | [Speculative Decoding](https://arxiv.org/abs/2211.17192), Assignment 2 Release |
 | Oct 26 | Paged Attention          | Fan Lai | [Slides](./Slides/L14-Paged-Attention.pdf) | [DistServe](https://arxiv.org/abs/2401.09670) |
 | Oct 28     | Advanced Topics: Agentic AI Scheduling                           |   Wei Zhang, Zhiyu Wu             |        |  |
-| Nov 2 | Adaptive KV              | Fan Lai | | [SGLang](https://arxiv.org/abs/2312.07104) |
+| Nov 2 | Adaptive KV              | Fan Lai | [Slides](./Slides/L15_adaptive_kv.pdf) | [SGLang](https://arxiv.org/abs/2312.07104) |
 | Nov 4  | Quantization             | Fan Lai | | [Murakkab](https://www.usenix.org/system/files/osdi26-chaudhry.pdf), Mid-semester Report Due | 
 | Nov 9  | MoE Efficiency           | Fan Lai | | Assignment 2 Due, Assignment 3 Released (for 4-credit students) |
 | Nov 11  | Project Check-in & Feedback  |  Fan Lai       | |  |
