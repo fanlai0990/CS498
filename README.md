@@ -57,8 +57,8 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 | Nov 21-29  | **Fall Break — No Class**                              |                |        |                    |
 | Nov 30     | Guest Lecture                                          |  Chen Wang (IBM)              |        |                    |
 | Dec 2      | Final Presentations                                    |                |        |   |
-| Dec 7      | Final Presentations                                    |                |        |   Assignment 3 Due                  |
-| Dec 9      | Final Presentations                                    |                |        |                    |
+| Dec 7      | Final Presentations                                    |                |        |                     |
+| Dec 9      | Final Presentations                                    |                |        |   Assignment 3 Due                 |
 | Dec 18     |                                                |                |        | Final Report Due   |
  ## Tentative Grading
 **Groups**:  Panel discussion and research project will be performed in groups of 4-5 students. Form a group and [declare your group's membership and paper preferences](https://forms.gle/dQCcc3zYL2fckGwUA) by **Sept 5**. After this date, we will form groups from the remaining students.
