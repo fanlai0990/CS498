@@ -53,7 +53,7 @@ Note that this course is **NOT focused on AI methods**.  Instead, we will *focus
 | Nov 9  | MoE Efficiency           | Fan Lai | [Slides](./Slides/L17_MoE.pdf) | Assignment 2 Due |
 | Nov 11  | Project Check-in & Feedback  |  Fan Lai       | |  |
 | Nov 16     | Project Check-in & Feedback                                | Fan Lai        |        |  Assignment 3 Released (for 4-credit students                  |
-| Nov 18     | Advanced Topics: RAG Systems                           | Fan Lai        |        | [MoonCake](https://www.usenix.org/conference/fast25/presentation/qin) |
+| Nov 18     | Advanced Topics: RAG Systems                           | Fan Lai        |  [Slides](./Slides/L18_RAG.pdf)      | [MoonCake](https://www.usenix.org/conference/fast25/presentation/qin) |
 | Nov 21-29  | **Fall Break — No Class**                              |                |        |                    |
 | Nov 30     | Guest Lecture                                          |  Chen Wang (IBM)              |        |                    |
 | Dec 2      | Final Presentations                                    |                |        |   |
